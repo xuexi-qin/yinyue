@@ -3,50 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload and Play Music</title>
+    <title>Music Player</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #f0f0f0;
             margin-top: 50px;
         }
-        .player {
-            margin: 20px auto;
-            width: 300px;
-        }
         audio {
-            width: 100%;
-            margin-top: 20px;
+            width: 80%;
+            margin: 20px 0;
         }
     </style>
 </head>
 <body>
-    <h1>Upload and Play Music</h1>
-    
-    <!-- 文件上传表单 -->
-    <input type="file" id="fileInput" accept="audio/*">
-    
-    <!-- 音频播放器 -->
-    <div class="player">
-        <audio id="audioPlayer" controls>
-            Your browser does not support the audio element.
-        </audio>
-    </div>
+    <h1>Play Your Favorite Music</h1>
 
-    <script>
-        const fileInput = document.getElementById('fileInput');
-        const audioPlayer = document.getElementById('audioPlayer');
+    <!-- 音乐播放器 -->
+    <audio controls>
+        <source src="https://github.com/xuexi-qin/yinyue/blob/main/miusic/%E5%9B%A0%E4%B8%BA%E7%88%B1%E6%83%85.%E8%AF%B4%E5%94%B1%E7%89%88.-%E5%BC%A0%E5%AE%B6%E6%97%BA.%E4%B8%83%E5%85%83%232zQCYk.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 
-        // 当用户选择文件时触发事件
-        fileInput.addEventListener('change', function() {
-            const file = this.files[0];
-            if (file) {
-                const objectURL = URL.createObjectURL(file);
-                audioPlayer.src = objectURL;
-                audioPlayer.play();  // 自动播放
-            }
-        });
-    </script>
+
+
 </body>
 </html>
